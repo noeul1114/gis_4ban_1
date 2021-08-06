@@ -44,7 +44,16 @@
     color: dimgrey;
 }
 
+.article_content {
+    font-size: 1.1rem;
+    text-align: left;
+}
 
+.article_image {
+    border-radius: 2rem;
+    width: 65%;
+    box-shadow: 0 0 1rem #b4b4b4;
+}
 
 
 
