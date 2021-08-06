@@ -287,7 +287,7 @@ magicGrid.listen();
 
 var masonrys = document.getElementsByTagName("img")
 
-for (let i=0; masonrys.length; i++) {
+for (let i=0; i < masonrys.length; i++) {
   masonrys[i].addEventListener('load', function () {
     magicGrid.positionItems();
   }, false)
