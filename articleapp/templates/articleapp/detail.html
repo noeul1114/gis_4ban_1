@@ -7,6 +7,17 @@
         <div class="my-5">
             {#      게시글 제목, 글쓴이, 작성일자      #}
             <h1 class="NNS_B">{{ target_article.title }}</h1>
+            <div class="my-3">
+                <a href="{% url 'likeapp:article_like' article_pk=target_article.pk %}"
+                   class="material-icons"
+                   style="vertical-align: middle; color: #f77;
+                          font-size: 1.4rem;">
+                    favorite
+                </a>
+                <span style="vertical-align: middle; font-size: 1.2rem;">
+                    {{ target_article.like }}
+                </span>
+            </div>
             <h4>{{ target_article.writer.profile.nickname }}</h4>
             <p>{{ target_article.created_at }}</p>
         </div>
