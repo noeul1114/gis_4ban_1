@@ -84,3 +84,8 @@ __pycache__/
 media/
 
 staticfiles/
+
+pragmatic_4ban.pem
+
+gis_4ban_gcp
+gis_4ban_gcp.pub
