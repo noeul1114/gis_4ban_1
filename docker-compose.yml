@@ -22,6 +22,8 @@ services:
       - gis_4ban_media:/home/gis_4ban_1/media/
     secrets:
       - DJANGO_SECRET_KEY
+      - MARIADB_USER
+      - MARIADB_PASSWORD
 
   mariadb:
     image: mariadb:10.5
@@ -29,6 +31,10 @@ services:
       - gis_4ban_network
     volumes:
       - gis_mariadb:/var/lib/mysql
+    secrets:
+      - MARIADB_ROOT_PASSWORD
+      - MARIADB_USER
+      - MARIADB_PASSWORD
     environment:
       MARIADB_ROOT_PASSWORD: password1234
       MARIADB_DATABASE: django
