@@ -14,7 +14,7 @@ services:
       - gis_4ban_media:/data/media/
 
   django:
-    image: gis_4ban_django:4
+    image: gis_4ban_django:5
     networks:
       - gis_4ban_network
     volumes:
@@ -52,4 +52,10 @@ volumes:
 
 secrets:
   DJANGO_SECRET_KEY:
+    external: true
+  MARIADB_ROOT_PASSWORD:
+    external: true
+  MARIADB_USER:
+    external: true
+  MARIADB_PASSWORD:
     external: true
