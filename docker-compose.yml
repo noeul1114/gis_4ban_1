@@ -20,6 +20,8 @@ services:
     volumes:
       - gis_4ban_static:/home/gis_4ban_1/staticfiles/
       - gis_4ban_media:/home/gis_4ban_1/media/
+    secrets:
+      - DJANGO_SECRET_KEY
 
   mariadb:
     image: mariadb:10.5
@@ -41,3 +43,7 @@ volumes:
   gis_4ban_static:
   gis_4ban_media:
   gis_mariadb:
+
+secrets:
+  DJANGO_SECRET_KEY:
+    external: true
