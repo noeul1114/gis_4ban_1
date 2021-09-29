@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo 'asdfasdgasdf'
+RUN echo 'asdfasdg'
 
 RUN git clone https://github.com/noeul1114/gis_4ban_1.git
 
