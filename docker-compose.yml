@@ -16,6 +16,8 @@ services:
       - gis_4ban_static:/data/static/
       - gis_4ban_media:/data/media/
       - gis_log:/var/log/nginx/
+    secrets:
+      - NGINX_AUTH
 
   django:
     image: gis_4ban_django:5
@@ -63,4 +65,6 @@ secrets:
   MARIADB_USER:
     external: true
   MARIADB_PASSWORD:
+    external: true
+  NGINX_AUTH:
     external: true
