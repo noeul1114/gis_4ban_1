@@ -5,7 +5,10 @@ services:
   nginx:
     image: nginx:1.19.5
     ports:
-      - 80:80
+      - mode: host
+        target: 80
+        published: 80
+        protocol: tcp
     networks:
       - gis_4ban_network
     volumes:
